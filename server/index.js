@@ -44,22 +44,22 @@ app.post('/add',(request,response)=>{
     })
 })
 
-// app.get('/Add',(request,response)=>{
+app.get('/list',(request,response)=>{
 
     
-//     let sql = 'select * from stu';
+    let sql = 'select * from stu';
 
-//     c.query(sql,(error,result)=>{
-//         if(error){
-//             let s = {"status":"error"};
-//             response.send(s);
-//         }
-//         else{
-//             let s = {"status":"success"};
-//             response.send(s);
-//         }
-//     })
+    c.query(sql,(error,result)=>{
+        if(error){
+            let s = {"status":"error"};
+            response.send(s);
+        }
+        else{
+            let s = {"status":"success"};
+            response.send(s);
+        }
+    })
 
-// })
+})
 
 app.listen(3336);
