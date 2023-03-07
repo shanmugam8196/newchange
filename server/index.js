@@ -45,21 +45,15 @@ app.post('/add',(request,response)=>{
 })
 
 app.get('/list',(request,response)=>{
-
-    
     let sql = 'select * from stu';
-
     c.query(sql,(error,result)=>{
         if(error){
-            let s = {"status":"error"};
-            response.send(s);
+            response.send(error);
         }
         else{
-            let s = {"status":"success"};
-            response.send(s);
+            response.send(result);
         }
     })
-
 })
 
 app.listen(3336);
